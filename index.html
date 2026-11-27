@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Список для чтения</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Список для чтения</h1>
+
+    <form id="add-form" class="add-form" autocomplete="off">
+      <input
+        id="title-input"
+        type="text"
+        placeholder="Название книги или статьи"
+        maxlength="120"
+      />
+      <button type="submit">Добавить</button>
+    </form>
+
+    <p id="warning" class="warning" hidden></p>
+
+    <div class="filters" role="group" aria-label="Фильтр записей">
+      <button type="button" class="filter-btn" data-filter="all">Все</button>
+      <button type="button" class="filter-btn" data-filter="unread">К прочтению</button>
+      <button type="button" class="filter-btn" data-filter="read">Прочитано</button>
+    </div>
+
+    <ul id="list" class="list"></ul>
+    <p id="empty" class="empty" hidden>В этом режиме пока нет записей.</p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
